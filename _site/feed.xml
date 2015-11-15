@@ -1,42 +1,384 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Your awesome title</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 07 Nov 2015 17:06:34 +0900</pubDate>
-    <lastBuildDate>Sat, 07 Nov 2015 17:06:34 +0900</lastBuildDate>
-    <generator>Jekyll v2.4.0</generator>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Twister</title>
+		<description>a powerful jekyll theme</description>
+		<link></link>
+		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Standard Post</title>
+				
+				
+					<description>&lt;p&gt;Here you can see the basic post. No fancy type, no setting and the featured image is just embedded into the content.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The front matter for that basic post just consists of the basic tags, author, title, featimg, tags and category.&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 08 Nov 2015 02:04:49 +0900</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/11/08/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/11/08/welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
+				
+				<pubDate>Tue, 10 Feb 2015 00:00:00 +0900</pubDate>
+				<link>/standard/</link>
+				<guid isPermaLink="true">/standard/</guid>
+			</item>
+		
+			<item>
+				<title>YouTube</title>
+				
+				
+					<description>&lt;p&gt;This is a youtube post type video.&lt;/p&gt;
+
+&lt;p&gt;For a YouTube video, no embedding code is required, it all works through the video ID. A featured image is not needed, as the video thumbnail will be used.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;---
+type: youtube
+yt-video-id: e0RFirBWQsE
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+				
+				<pubDate>Mon, 09 Feb 2015 00:00:00 +0900</pubDate>
+				<link>/youtube/</link>
+				<guid isPermaLink="true">/youtube/</guid>
+			</item>
+		
+			<item>
+				<title>Audio</title>
+				
+				
+					<description>&lt;p&gt;This audio post is displays without a sidebar and has the iframe set for the index pages, instead of a featured image.&lt;/p&gt;
+
+&lt;p&gt;For the audio post to work, type must be set to audio and the audio-embed filled with an iframe.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;---
+type: audio
+audio-embed: &amp;lt;iframe width=&quot;100%&quot; height=&quot;450&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/188464611&amp;amp;amp;auto_play=false&amp;amp;amp;hide_related=false&amp;amp;amp;show_comments=true&amp;amp;amp;show_user=true&amp;amp;amp;show_reposts=false&amp;amp;amp;visual=true&quot;&amp;gt;&amp;lt;/iframe&amp;gt;
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+				
+				<pubDate>Sun, 08 Feb 2015 00:00:00 +0900</pubDate>
+				<link>/audio/</link>
+				<guid isPermaLink="true">/audio/</guid>
+			</item>
+		
+			<item>
+				<title>Image</title>
+				
+				
+					<description>&lt;p&gt;Here you see an image post in the standard layout, with sidebar.&lt;/p&gt;
+
+&lt;p&gt;The Front Matter for that looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;---
+type: image
+featimg: 5.jpg
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+				
+				<pubDate>Sat, 07 Feb 2015 00:00:00 +0900</pubDate>
+				<link>/img/</link>
+				<guid isPermaLink="true">/img/</guid>
+			</item>
+		
+			<item>
+				<title>Gallery</title>
+				
+				
+					<description>&lt;p&gt;Here you’ll find a simple gallery, that just adds all of the images at full-width directly in the post content.&lt;/p&gt;
+
+&lt;p&gt;Galleries are defined in a data-sheet, set type and gallery-id in front matter and include &lt;code&gt;gallery.html&lt;/code&gt; within the content.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6 id=&quot;datagalleriesyml&quot;&gt;_data/galleries.yml&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;- id: gallery
+  imagefolder: /img/galleries/gallery-standard-post
+  images:
+  - filename: 1.jpg
+    alttext: Bloom Flat
+  - filename: 2.jpg
+    alttext: Bloom
+  - filename: 3.jpg
+    alttext: Blossom in a Star
+  - filename: 4.jpg
+    alttext: Blossom
+  - filename: 5.jpg
+    alttext: Bubbly Bloom
+  - filename: 6.jpg
+    alttext: Rays of Gold
+  - filename: 7.jpg
+    alttext: Exotic
+  - filename: 8.jpg
+    alttext: Filled out
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6 id=&quot;front-matter&quot;&gt;front matter&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;---
+type: gallery
+gallery-id: gallery
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6 id=&quot;post-content&quot;&gt;post content&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-liquid&quot;&gt;
+{% include gallery.html %}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;gallery&quot;&gt;
     
-  </channel>
+        
+            
+            &lt;b&gt;Bloom Flat&lt;/b&gt;
+            &lt;img src=&quot;/img/galleries/gallery-standard-post/1.jpg&quot; alt=&quot;Bloom Flat&quot; /&gt;
+
+            &lt;b&gt;Bloom&lt;/b&gt;
+            &lt;img src=&quot;/img/galleries/gallery-standard-post/2.jpg&quot; alt=&quot;Bloom&quot; /&gt;
+
+            &lt;b&gt;Blossom in a Star&lt;/b&gt;
+            &lt;img src=&quot;/img/galleries/gallery-standard-post/3.jpg&quot; alt=&quot;Blossom in a Star&quot; /&gt;
+
+            &lt;b&gt;Blossom&lt;/b&gt;
+            &lt;img src=&quot;/img/galleries/gallery-standard-post/4.jpg&quot; alt=&quot;Blossom&quot; /&gt;
+
+            &lt;b&gt;Bubbly Bloom&lt;/b&gt;
+            &lt;img src=&quot;/img/galleries/gallery-standard-post/5.jpg&quot; alt=&quot;Bubbly Bloom&quot; /&gt;
+
+            &lt;b&gt;Rays of Gold&lt;/b&gt;
+            &lt;img src=&quot;/img/galleries/gallery-standard-post/6.jpg&quot; alt=&quot;Rays of Gold&quot; /&gt;
+
+            &lt;b&gt;Exotic&lt;/b&gt;
+            &lt;img src=&quot;/img/galleries/gallery-standard-post/7.jpg&quot; alt=&quot;Exotic&quot; /&gt;
+
+            &lt;b&gt;Filled out&lt;/b&gt;
+            &lt;img src=&quot;/img/galleries/gallery-standard-post/8.jpg&quot; alt=&quot;Filled out&quot; /&gt;
+
+
+
+&lt;/div&gt;
+
+</description>
+				
+				<pubDate>Fri, 06 Feb 2015 00:00:00 +0900</pubDate>
+				<link>/gallery/</link>
+				<guid isPermaLink="true">/gallery/</guid>
+			</item>
+		
+			<item>
+				<title>Full Width Post</title>
+				
+				
+					<description>&lt;p&gt;a standard post displayed at full-width, only requires a layout, variable.&lt;br /&gt;
+The featured image will be added at the beginning of the content, but not above it, as in an image post.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;---
+layout: post_full
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+				
+				<pubDate>Thu, 05 Feb 2015 00:00:00 +0900</pubDate>
+				<link>/standard-full/</link>
+				<guid isPermaLink="true">/standard-full/</guid>
+			</item>
+		
+			<item>
+				<title>YouTube full</title>
+				
+				
+					<description>&lt;p&gt;This youtube video uses the iframe instead of the thumbnail image on the index pages.&lt;/p&gt;
+
+&lt;p&gt;For a YouTube video, no embedding code is required, it all works through the video ID.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;---
+layout: post_full
+type: youtube
+yt-video-id: hPX9h5OrlhU
+homedisplay: iframe
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+				
+				<pubDate>Wed, 04 Feb 2015 00:00:00 +0900</pubDate>
+				<link>/youtube-full/</link>
+				<guid isPermaLink="true">/youtube-full/</guid>
+			</item>
+		
+			<item>
+				<title>Audio Full</title>
+				
+				
+					<description>&lt;p&gt;This audio post is displays without a sidebar and has a featured image set for the index pages.&lt;/p&gt;
+
+&lt;p&gt;For the audio post to work, type must be set to audio and the audio-embed filled with an iframe.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;---
+layout: post_full
+type: audio
+audio-embed: &amp;lt;iframe width=&quot;100%&quot; height=&quot;450&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/143789807&amp;amp;amp;auto_play=false&amp;amp;amp;hide_related=false&amp;amp;amp;show_comments=true&amp;amp;amp;show_user=true&amp;amp;amp;show_reposts=false&amp;amp;amp;visual=true&quot;&amp;gt;&amp;lt;/iframe&amp;gt;
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+				
+				<pubDate>Tue, 03 Feb 2015 00:00:00 +0900</pubDate>
+				<link>/audio-full/</link>
+				<guid isPermaLink="true">/audio-full/</guid>
+			</item>
+		
+			<item>
+				<title>Image Full</title>
+				
+				
+					<description>&lt;p&gt;Here you see an image post with a full-width layout. &lt;/p&gt;
+
+&lt;p&gt;The Front Matter for that looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;---
+layout: post_full
+type: image
+featimg: 5.jpg
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+				
+				<pubDate>Mon, 02 Feb 2015 00:00:00 +0900</pubDate>
+				<link>/img-full/</link>
+				<guid isPermaLink="true">/img-full/</guid>
+			</item>
+		
+			<item>
+				<title>Gallery Alternative</title>
+				
+				
+					<description>&lt;p&gt;An alternative to the simple gallery would be this version, which displays the post ins a lightbox.&lt;br /&gt;
+The setup basically is the same, the include makes all the difference.&lt;/p&gt;
+
+&lt;p&gt;Galleries are defined in a data-sheet, set type and gallery-id in front matter and include &lt;code&gt;gallery_lightbox.html&lt;/code&gt; within the content.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6 id=&quot;datagalleriesyml&quot;&gt;_data/galleries.yml&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;- id: gallery
+  imagefolder: /img/galleries/gallery-standard-post
+  images:
+  - filename: 1.jpg
+    alttext: Bloom Flat
+  - filename: 2.jpg
+    alttext: Bloom
+  - filename: 3.jpg
+    alttext: Blossom in a Star
+  - filename: 4.jpg
+    alttext: Blossom
+  - filename: 5.jpg
+    alttext: Bubbly Bloom
+  - filename: 6.jpg
+    alttext: Rays of Gold
+  - filename: 7.jpg
+    alttext: Exotic
+  - filename: 8.jpg
+    alttext: Filled out
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6 id=&quot;front-matter&quot;&gt;front matter&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;---
+layout: post_full
+type: gallery
+gallery-id: gallery
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6 id=&quot;post-content&quot;&gt;post content&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-liquid&quot;&gt;
+{% include gallery_lightbox.html %}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;masonry&quot;&gt;
+    
+        
+            
+                &lt;a href=&quot;/img/galleries/gallery-standard-post/1.jpg&quot; data-imagelightbox=&quot;f&quot; class=&quot;noline&quot;&gt;
+                    &lt;img src=&quot;/img/galleries/gallery-standard-post/1.jpg&quot; alt=&quot;Bloom Flat&quot; /&gt;
+                &lt;/a&gt;
+            
+                &lt;a href=&quot;/img/galleries/gallery-standard-post/2.jpg&quot; data-imagelightbox=&quot;f&quot; class=&quot;noline&quot;&gt;
+                    &lt;img src=&quot;/img/galleries/gallery-standard-post/2.jpg&quot; alt=&quot;Bloom&quot; /&gt;
+                &lt;/a&gt;
+            
+                &lt;a href=&quot;/img/galleries/gallery-standard-post/3.jpg&quot; data-imagelightbox=&quot;f&quot; class=&quot;noline&quot;&gt;
+                    &lt;img src=&quot;/img/galleries/gallery-standard-post/3.jpg&quot; alt=&quot;Blossom in a Star&quot; /&gt;
+                &lt;/a&gt;
+            
+                &lt;a href=&quot;/img/galleries/gallery-standard-post/4.jpg&quot; data-imagelightbox=&quot;f&quot; class=&quot;noline&quot;&gt;
+                    &lt;img src=&quot;/img/galleries/gallery-standard-post/4.jpg&quot; alt=&quot;Blossom&quot; /&gt;
+                &lt;/a&gt;
+            
+                &lt;a href=&quot;/img/galleries/gallery-standard-post/5.jpg&quot; data-imagelightbox=&quot;f&quot; class=&quot;noline&quot;&gt;
+                    &lt;img src=&quot;/img/galleries/gallery-standard-post/5.jpg&quot; alt=&quot;Bubbly Bloom&quot; /&gt;
+                &lt;/a&gt;
+            
+                &lt;a href=&quot;/img/galleries/gallery-standard-post/6.jpg&quot; data-imagelightbox=&quot;f&quot; class=&quot;noline&quot;&gt;
+                    &lt;img src=&quot;/img/galleries/gallery-standard-post/6.jpg&quot; alt=&quot;Rays of Gold&quot; /&gt;
+                &lt;/a&gt;
+            
+                &lt;a href=&quot;/img/galleries/gallery-standard-post/7.jpg&quot; data-imagelightbox=&quot;f&quot; class=&quot;noline&quot;&gt;
+                    &lt;img src=&quot;/img/galleries/gallery-standard-post/7.jpg&quot; alt=&quot;Exotic&quot; /&gt;
+                &lt;/a&gt;
+            
+                &lt;a href=&quot;/img/galleries/gallery-standard-post/8.jpg&quot; data-imagelightbox=&quot;f&quot; class=&quot;noline&quot;&gt;
+                    &lt;img src=&quot;/img/galleries/gallery-standard-post/8.jpg&quot; alt=&quot;Filled out&quot; /&gt;
+                &lt;/a&gt;
+            
+        
+    
+&lt;/div&gt;
+
+</description>
+				
+				<pubDate>Sun, 01 Feb 2015 00:00:00 +0900</pubDate>
+				<link>/gallery-alt/</link>
+				<guid isPermaLink="true">/gallery-alt/</guid>
+			</item>
+		
+			<item>
+				<title>Vimeo</title>
+				
+				
+					<description>&lt;p&gt;this is a video post using the vimeo format.&lt;/p&gt;
+
+&lt;p&gt;To create one you just have to use the type-specific variables within the Front Matter and paste the embed code directly from vimeo.&lt;/p&gt;
+
+&lt;p&gt;this post also shows the video on the home page instead of the featured image.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-yml&quot;&gt;---
+type: vimeo
+vimeo-embed: &amp;lt;iframe src=&quot;//player.vimeo.com/video/118589137&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;
+homedisplay: iframe
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+				
+				<pubDate>Sat, 31 Jan 2015 00:00:00 +0900</pubDate>
+				<link>/vimeo/</link>
+				<guid isPermaLink="true">/vimeo/</guid>
+			</item>
+		
+	</channel>
 </rss>
