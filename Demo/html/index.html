@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <title>Demo</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.1.0/css/ol.css" type="text/css">
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v4.1.0/build/ol.js"></script>
+
+	<script type="text/javascript"src="../public/js/proj4/proj4.js"></script>
+
+	<script type="text/javascript"src="../public/js/jquery/jquery-1.9.1.min.js"></script>
+
+	<script type="text/javascript"src="../public/js/index.js"></script>
+	
+    <style>
+      #css_animation{
+          height:50px; 
+          width:50px;
+          border-radius: 25px; 
+          background: rgba(255, 0, 0, 0.9);
+
+          transform: scale(0);
+          animation: myfirst 3s;      
+          animation-iteration-count: infinite;
+      }
+
+      @keyframes myfirst{
+          to{
+              transform: scale(2);
+              background: rgba(0, 0, 0, 0);
+          }
+      }
+      
+      .div_Ctr{
+      	position: absolute;
+	    z-index: 10;
+	    text-size-adjust: none;
+	    bottom: auto;
+	    right: 15px;
+	    top: 15px;
+	    left: auto;
+      }
+  </style>
+  </head>
+  <body>
+    <!--map-->
+    <div id="map" class="map" style="height:768px;"></div>
+    
+    <!-- draw 按钮 -->
+    <div class="div_Ctr"></div>
+
+    <!--切换图层-->
+
+    <form class="form-inline">
+      <label>点/线/圆/多边形 &nbsp;</label>
+      <select id="type">
+        <option value="Point">Point</option>
+        <option value="LineString">LineString</option>
+        <option value="Polygon">Polygon</option>
+        <option value="Circle">Circle</option>
+        <option value="None" selected="selected">None</option>
+      </select>
+    </form>
+    
+   	<input type="button" value="模拟登陆" onclick="demoLogin()">
+
+    <!-- <div id="css_animation"></div> -->
+</body>
+</html>
